@@ -1,0 +1,5 @@
+<h2>Product View</h2>
+<div class="container" >
+    <app-product-detials [product]="product"*ngFor="let product of products"></app-product-detials>
+</div>
+<a [routerLink]="['/product']">Back</a>

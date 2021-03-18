@@ -1,0 +1,11 @@
+<div class="subcontainer">
+    <img [src]="image"/>
+    <span style='font-weight:Bold'>ProductName: </span>{{product.name}}
+    <br><br>
+    <span style='font-weight:Bold'>Product Amount: </span>{{product.amount}}
+    <br><br>
+    <span style='font-weight:Bold'>Product Status: </span>{{product.status}}
+    <input type="button" value="Enable" class="enable" (click)="statusUpdate('Active')">
+    <br>
+    <input type="button" value="Disable" class="disable" (click)="statusUpdate('InActive')">
+</div>

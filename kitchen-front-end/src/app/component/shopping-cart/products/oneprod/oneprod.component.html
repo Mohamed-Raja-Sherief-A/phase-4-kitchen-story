@@ -1,0 +1,9 @@
+<div class="subcontainer" *ngIf="product.status==='Active'">
+    <img [src]="image"/>
+    <br/><br/>
+    <span style='font-weight:Bold'>ProductName: </span>{{product.name}}
+    <br><br>
+    <span style='font-weight:Bold'>Product Amount: </span>{{product.amount}}
+    <br><br>
+    <input type="button" value="Add to cart" class="enable" (click)="addToCart()">
+</div>

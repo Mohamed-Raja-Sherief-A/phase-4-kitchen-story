@@ -1,0 +1,8 @@
+<h2>Add Products</h2>
+	<div class="container">
+			Enter Product Name:<input type="text" [(ngModel)]="name"/>
+			Enter Product Amount:<input type="number" [(ngModel)]="amount"/>
+			Select Image:<input type="file" (change)="onFileChanged($event)"/><br/>
+			<input type="button" value="Add" (click)="addProduct()"/><br/>
+		<a href="/product">Back</a><br/>
+	</div>

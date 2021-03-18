@@ -1,0 +1,7 @@
+<div class="mainheader">
+    <input type="button" value="Log Out" class="logout" (click)="logout()">
+    <input type="button" value="Cart" class="checkout" (click)="cart()">
+</div>
+<b>Search:</b><input type="text" [(ngModel)]="search" placeholder="Search...."/>
+<br><br>
+<app-products [search]="search"></app-products>

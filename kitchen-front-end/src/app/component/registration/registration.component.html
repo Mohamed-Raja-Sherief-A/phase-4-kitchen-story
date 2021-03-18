@@ -1,0 +1,8 @@
+<div class="container">
+        <h3>Registration Form</h3>
+       Enter username:<input type="text" [(ngModel)]="username"/><br/>
+        Enter password:<input type="text" [(ngModel)]="password"/><br/>
+        <input type="button" value="submit" (click)="onSubmit()"/><br/>
+<a [routerLink]="['/login']">back</a><br/>
+</div>
+{{message}}

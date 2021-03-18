@@ -1,0 +1,6 @@
+<div class="container">
+    <app-cart *ngFor="let cart of carts;let i=index" [cart]="cart" [i]="i"></app-cart>
+</div>
+<br><br>
+<input type="button" value="Check Out" class="checkout" (click)="checkOut()"><br><br>
+<a [routerLink]="['/shoppingCart']" class="back">Back</a>
