@@ -1,0 +1,16 @@
+<div class="row search mx-auto">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-search p-2"></i></span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="search" placeholder="Search....">
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row mt-5">
+        <div class="col-md-3 mb-3" *ngFor="let product of products | custom : search">
+            <app-product-shop [product]="product"></app-product-shop>
+        </div>
+    </div>
+</div>
+

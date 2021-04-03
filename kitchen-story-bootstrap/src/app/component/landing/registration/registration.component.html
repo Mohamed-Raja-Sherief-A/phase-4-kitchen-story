@@ -1,0 +1,30 @@
+<div class="modal">
+    <div class="container mx-auto pb-5 animate__animated animate__zoomInDown">
+      <div class="d-flex flex-column align-items-end">
+      <button class="btn btn-sm" (click)="close()"><i class="fa fa-window-close"style="font-size:30px;color:red"></i></button>
+      </div>
+        <h3 class="text-center pb-5">Registration Form</h3>
+        <form [formGroup]="registrationForm" (ngSubmit)="loginSubmit()">
+          <div class="row mx-auto my-2">
+            <p>Enter Username:</p>
+            <input class="form-control" type="text" formControlName="username">
+            <p *ngIf="registrationForm.get('username').errors?.usernameExists" class="alert alert-warning mx-auto">Username already exists</p>
+          </div>
+          <div class="row mx-auto my-2">
+            <p>Password:</p>
+            <input class="form-control" type="password" formControlName="password1">
+          </div>
+          <div class="row mx-auto my-2">
+            <p>Re-Enter Password:</p>
+            <input class="form-control" type="password" formControlName="password2">
+          </div>
+          <div class="row alert alert-warning mx-auto" *ngIf="registrationForm.get('password2').touched &&
+          registrationForm.get('password1').value!=registrationForm.get('password2').value">
+              Password doesnt match
+          </div>
+          <div class="row mx-auto mt-5">
+             <button type="submit" class="btn btn-sm btn-primary" [disabled]="!registrationForm.valid">Submit</button>
+          </div>
+        </form>
+    </div>
+  </div>

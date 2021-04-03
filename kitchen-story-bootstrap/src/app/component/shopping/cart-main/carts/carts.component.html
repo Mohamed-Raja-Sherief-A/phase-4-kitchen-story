@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h3>Your Cart</h3>
+    <div *ngIf="carts.length===0"><img class="logo-img" src="assets/img/empty-cart.png"></div>
+    <div *ngIf="carts.length!=0">
+      <ul class="list-group mb-3 overflow-auto ">
+          <li class="list-group-item d-flex justify-content-between lh-sm" *ngFor="let cart of carts;let i=index">
+              <div>
+                <h6 class="my-0">Product name</h6>
+                <small class="text-muted">{{cart.name}}</small>
+              </div>
+              <span class="text-muted">
+                {{cart.amount}}Rs 
+                <button class="btn btn-md  btn-danger" (click)="delete(i)"><i class="fa fa-trash" ></i></button>
+              </span>
+            </li>
+      </ul>
+      
+      <div class="card p-2 mb-1" >
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Promo code">
+          <button type="submit" class="btn btn-secondary">Redeem</button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-start amount ">
+        Total : {{amount}} Rs
+      </div>
+
+    </div>
+
+</div>

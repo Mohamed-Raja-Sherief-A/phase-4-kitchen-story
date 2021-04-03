@@ -1,0 +1,22 @@
+<h3 class="text-center mt-3">Product Form</h3>
+<div class="container mt-5">
+<form [formGroup]="productForm" (ngSubmit)="productSubmit()">
+    
+        <div class="row mx-auto my-3">
+            Product Name:
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="row mx-auto my-3">
+            Product Amount:
+            <input type="number" class="form-control" formControlName="amount">
+        </div>
+        <div class="row mx-auto my-3">
+            Product Image:
+            <input type="file" class="form-control" (change)="onFileChanged($event)" formControlName="file">
+        </div>
+        <div class="row-button mx-auto my-5">
+            <button type="submit" class="btn btn-md btn-success" [disabled]="!productForm.valid">Submit</button>
+        </div>
+        <p *ngIf="productForm.status==='pending'">Loading...</p>
+</form>
+</div>

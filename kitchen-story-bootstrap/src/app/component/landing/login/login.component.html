@@ -1,0 +1,22 @@
+<div class="modal">
+  <div class="container mx-auto pb-5 animate__animated animate__zoomInDown">
+    <div class="d-flex flex-column align-items-end">
+    <button class="btn btn-sm" (click)="close()"><i class="fa fa-window-close"style="font-size:30px;color:red"></i></button>
+    </div>
+      <h3 class="text-center pb-5">Login Form</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+        <div class="row mx-auto my-2">
+          <p>Enter Username:</p>
+          <input class="form-control" type="text" formControlName="username">
+        </div>
+        <div class="row mx-auto my-2">
+          <p>Password:</p>
+          <input class="form-control" type="password" formControlName="password">
+        </div>
+        <div class="row mx-auto mt-5">
+           <button type="submit" class="btn btn-sm btn-primary" [disabled]="!loginForm.valid">Submit</button>
+           
+        </div>
+      </form>
+  </div>
+</div>

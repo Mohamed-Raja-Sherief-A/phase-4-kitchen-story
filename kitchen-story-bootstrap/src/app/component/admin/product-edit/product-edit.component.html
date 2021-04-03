@@ -1,0 +1,20 @@
+<h3 class="text-center mt-2">Product Update Form</h3>
+<div class="container">
+    <div class="row  mx-auto">
+      <img  [src]="image" class="mx-auto">
+    </div>
+    <form [formGroup]="productForm" (ngSubmit)="update()">
+        <div class="row my-3 mx-auto">
+           <b> Product Name:</b>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="row my-3 mx-auto">
+           <b> Amount:</b>
+            <input type="number" class="form-control" formControlName="amount">
+        </div>
+        <div class="row my-5 mx-auto">
+            <button type="submit" class="btn btn-md btn-primary mx-auto" [disabled]="!productForm.valid">Submit</button>
+            <button  class="btn btn-md btn-danger mx-auto" (click)="back()">Back</button>
+        </div>
+    </form>
+</div>

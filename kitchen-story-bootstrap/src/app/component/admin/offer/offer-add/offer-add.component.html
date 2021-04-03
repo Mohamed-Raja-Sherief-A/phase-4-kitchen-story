@@ -1,0 +1,16 @@
+<div class="container">
+    <h3 class="py-5 text-center">Add Offer</h3>
+    <form [formGroup]="offerForm" (ngSubmit)="submit()">
+        <div class="row mx-auto my-3">
+            Offer Code:
+            <input type="text" class="form-control" formControlName="code">
+        </div>
+        <div class="row mx-auto my-3">
+            Offer Amount:
+            <input type="number" class="form-control" formControlName="offer">
+        </div>
+        <div class="row mx-auto my-5">
+            <button type="submit" class="btn btn-md btn-success " [disabled]="!offerForm.valid">Submit</button>
+        </div>
+    </form>
+</div>

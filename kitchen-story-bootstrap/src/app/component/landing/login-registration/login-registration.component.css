@@ -1,0 +1,11 @@
+.container .btn{
+    width: 30%;
+}
+.btn {
+    border-radius: 0% !important;
+    box-shadow: none !important;
+}
+.btn-primary {
+    background-color: #020100 !important;
+    border-color: #020100 !important;
+}

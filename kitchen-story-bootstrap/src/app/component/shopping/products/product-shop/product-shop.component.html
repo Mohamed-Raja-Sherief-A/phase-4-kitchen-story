@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">Amount: {{product.amount}} Rs</p>
+      <button class="btn btn-md btn-primary text-center"(click)="cart()">Add To Cart</button>
+    </div>
+</div>

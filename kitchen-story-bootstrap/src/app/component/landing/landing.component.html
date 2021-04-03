@@ -1,0 +1,19 @@
+<!--Login Header-->
+<app-landing-header></app-landing-header>
+  
+  <!--Body-->
+  <section class="main">
+      <div class="row">
+          <div class="col-lg-6 my-auto">
+             <app-login-registration (loginClickEvent)="loginCheck($event)" (signupClickEvent)="signupCheck($event)"></app-login-registration>
+          </div>
+          <div  class="col-lg-6 my-auto text-center shadow-lg ">
+             <app-custom-carousel></app-custom-carousel>
+          </div>
+      </div>
+  </section>
+  
+  <!--Modal-->
+
+  <app-login *ngIf="logincheck" (loginEmitter)="loginCheck($event)" ></app-login>
+  <app-registration *ngIf="signupcheck" (registrationEmitter)="signupCheck($event)"></app-registration>

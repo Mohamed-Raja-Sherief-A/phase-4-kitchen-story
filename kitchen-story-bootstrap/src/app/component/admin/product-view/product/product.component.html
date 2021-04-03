@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">Amount: {{product.amount}} Rs</p>
+      <p class="card-text">Status: {{product.status}}</p>
+      <button class="btn btn-md btn-success" (click)="enable()">Enable</button> <button class="btn btn-md btn-danger m-2" (click)="disable()">Disable</button> <button class="btn btn-md btn-primary m-2" (click)="edit()">Edit</button>
+    </div>
+  </div>
